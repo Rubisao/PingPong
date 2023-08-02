@@ -28,11 +28,12 @@ let colidiu = false;
 let meusPontos = 0;
 let pontosOponente = 0;
 
-//Sons do jogo
+//Game Songs
 let raquetada;
 let gol;
 let trilhaSonora;
 
+//Game Songs
 function preload(){
   trilhaSonora = loadSound("trilha.mp3");
   gol = loadSound("ponto.mp3");
@@ -59,7 +60,8 @@ function draw() {
     marcaPonto();
     bolinhaNaoFicaPresa();
 }
-//funções
+
+//FUNCTIONS
 function mostraBolinha(){
   circle(xBolinha, yBolinha, dBolinha);
 }
@@ -107,7 +109,6 @@ function verificaColisaoRaquete(x, y){
   }
 }
 
-
 //modo multiplayer
 function movimentoRaqueteOponente(){
   if (keyIsDown(87)){
@@ -117,8 +118,6 @@ function movimentoRaqueteOponente(){
   yRaqueteOponente += 10;
   }
 }
-
-
 
 function incluiPlacar (){
   stroke(255);
